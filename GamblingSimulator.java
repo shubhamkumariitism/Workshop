@@ -5,7 +5,8 @@
  */
 package com.bridgelab.gamblingsimulator;
 
-public class GamblingSimulator {
+public class GamblingSimulator 
+{
 
         public static final int STAKE = 100;
         public static final int BET= 1;
@@ -24,6 +25,27 @@ public class GamblingSimulator {
 
                 }
 
+        }
+        
+   
+    public static double calcuateWinorLossPercentage()
+    {
+            int cash=STAKE;
+            int LooseNumber = 0;
+            int WinNumber=0;
+            while (LooseNumber<(0.50*cash) && WinNumber<(0.50*cash))
+            {
+                double winOrLoose = winOrLoose();
+                if(winOrLoose==1)
+                {
+                   WinNumber= WinNumber+BET;
+                }
+                else{
+                    LooseNumber=LooseNumber+BET;
+                }
+            }
+            return 0;
+            
         }
 
     public static void main(String[] args) {
