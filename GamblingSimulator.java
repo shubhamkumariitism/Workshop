@@ -3,19 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package gamblingsimulator;
+package com.bridgelab.gamblingsimulator;
 
-/**
- *
- * @author shubcool
- */
 public class GamblingSimulator {
 
-    /**
-     * @param args the command line arguments
-     */
+        public static final int STAKE = 100;
+        public static final int BET= 1;
+        public static double winOrLoose()
+        {
+                double outcome=Math.random()%2;
+                if (outcome==1)
+                {
+                        System.out.println("WIN");
+                        return outcome;
+                }
+                else
+                {
+                         System.out.println("LOOSE");
+                         return outcome;
+
+                }
+
+        }
+
     public static void main(String[] args) {
-        // TODO code application logic here
+            GamblingSimulator gamblerObject;
+            gamblerObject = new GamblingSimulator();
+            double OutputOfToss = GamblingSimulator.winOrLoose();
+            System.out.println(OutputOfToss);
+
     }
     
 }
